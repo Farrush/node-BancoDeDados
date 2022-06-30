@@ -1,0 +1,25 @@
+{{>partials/header}}
+
+<form method=POST action=/novousuario>
+    <h2>Novo Usuário</h2>
+        <input type=text name=nome placeholder="Digite um Nome">
+        </br>
+        </br>
+        <input type=number name=idade placeholder="Digite uma Idade">
+        </br>
+        </br>
+        <input type=submit value=Insert>
+
+    <form>
+    {{#user}}
+        <li>{{user.name}} - {{user.age}} anos</li>
+    {{/user}}
+
+    <h3>Usuários Cadastrados</h3>
+    {{#users}}
+        <ul>
+            <li>{{name}} - Idade: {{age}}</li>
+        </ul>
+    {{/users}}
+
+{{>partials/footer}}
